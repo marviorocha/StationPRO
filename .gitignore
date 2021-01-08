@@ -3,6 +3,7 @@
 .jekyll-cache
 .sass-cache
 _site
-
+node_modules/
+wordpress/
 Imminent-master
 Gemfile.lock
