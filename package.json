@@ -1,0 +1,22 @@
+{
+  "name": "StationPRO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:marviorocha/StationPRO.git",
+  "author": "marviorocha <marviorocha@marviorocha.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tailwindcss build assets/styles/styles.css -o styles.css",
+    "prod": "cross-env NODE_ENV=production tailwindcss build assets/styles/styles.css -o styles.css",
+    "watch": "nodemon -e css -x yarn dev -i ./styles.css",
+    "serve": "yarn watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.6",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.0.1"
+  }
+  
+}
