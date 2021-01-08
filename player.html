@@ -3,49 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Player</title>
 </head>
 <body>
-     
-<nav class="bg-indigo-500 bg-opacity-90 h-24 flex">
-    <div class="relative container mx-auto max-w-screen-lg flex space-x-8 items-center">
-        <div class="w-28 flex-shrink">
-            <img class="w-24 block h-24 duration-75 delay-500 rounded-xl absolute bottom-6"
-                src="https://placeimg.com/640/480/natural" alt="" />
-      </div>
-    <div class="text-white "><b> PLAY NOW:</b> Music Forrever <br /></div>
-    <div class="flex justify-center items-center px-1 md:px-20 space-x-3">
-        <button class="transition transform duration-500 ease-in hover:scale-105">
-            <svg class="fill-current relative z-10 text-blue-600 w-16 bg-white rounded-full shadow-lg h-16 hover:text-opacity-70"
-                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
-                style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg)" viewBox="0 0 24 24"
-                transform="rotate(360deg)">
-                <path
-                    d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5l6-4.5l-6-4.5v9z" />
-                <rect />
-            </svg>
-            <span class="animate-ping absolute top-3 left-2 z-1 rounded-full w-11 h-11 bg-white opacity-40"></span>
-        </button>
-        <span class="text-xs font-semibold text-white shadow-md bg-red-600 p-1 rounded-md uppercase">Live</span>
-        <button>
-            <svg class="fill-current w-9 h-9 text-white" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em"
-                style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
-                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path
-                    d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z" />
-                <path
-                    d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697L14 21.868V2.132L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2z" />
-                <rect x="0" y="0" />
-          </svg>
-        </button>
-  
-        <span class="leading-8 ">Time: 01:01</span>
-  
-        <button class="hidden">Heart</button>
-      </div>
-    </div>
-  </nav>
+    <nav class="bg-blue-500 mt-auto bg-opacity-90 h-24 flex fixed w-full w-screen">
+        <div class="relative flex space-x-8 items-center">
+            <div class="w-28 flex-shrink">
+                <img class="w-24 block h-24 duration-75 delay-500 rounded-xl absolute bottom-6"
+                    src="https://placeimg.com/640/480/natural" alt="" />
+          </div>
+        <div class="text-white "><b> PLAY NOW:</b> Music Forrever <br /></div>
+        <div class="flex justify-center items-center px-1 md:px-20 space-x-3">
+            <button class="transition transform duration-500 ease-in hover:scale-105">
+                <svg class="fill-current relative z-10 text-blue-600 w-16 bg-white rounded-full shadow-lg h-16 hover:text-opacity-70"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                    style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg)" viewBox="0 0 24 24"
+                    transform="rotate(360deg)">
+                    <path
+                        d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m-2 14.5l6-4.5l-6-4.5v9z" />
+                    <rect />
+                </svg>
+                <span class="animate-ping absolute top-3 left-2 z-1 rounded-full w-11 h-11 bg-white opacity-40"></span>
+            </button>
+            <span class="text-xs font-semibold text-white shadow-md bg-red-600 p-1 rounded-md uppercase">Live</span>
+            <button>
+                <svg class="fill-current w-9 h-9 text-white" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em"
+                    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path
+                        d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z" />
+                    <path
+                        d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697L14 21.868V2.132L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2z" />
+                    <rect x="0" y="0" />
+              </svg>
+            </button>
+      
+            <span class="leading-8 ">Time: 01:01</span>
+      
+            <button class="hidden">Heart</button>
+          </div>
+        </div>
+      </nav>
+<div class="container mx-auto max-w-screen-lg">
+    <p class="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat alias ipsum!
+        Veritatis,
+        fugiat autem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quisquam pariatur ab incidunt. Perferendis
+        non laudantium reprehenderit, voluptatem deserunt id. Quae dolorem sapiente numquam impedit iusto temporibus,
+        blanditiis non ipsa eveniet architecto et consectetur sit provident veritatis iste esse voluptates fugit
+        mollitia consequatur velit necessitatibus saepe dolor? Eaque, itaque? Soluta, perspiciatis, nemo esse
+        repellendus iure, qui molestias tempora ipsa beatae nam et sapiente. Et animi expedita possimus cupiditate eos
+        porro omnis id aliquid? Unde voluptate nihil placeat exercitationem deserunt iste et a ullam laudantium
+        provident ea consequatur sapiente natus, error asperiores nesciunt officiis voluptatibus rerum eaque totam iusto
+        debitis harum fugiat. Non qui rem, odit delectus architecto voluptatum facilis laborum mollitia deserunt vitae
+        dolores numquam minus quidem reprehenderit est. Expedita placeat, aspernatur perferendis porro ad optio veniam
+        adipisci tempora numquam ratione. Reprehenderit aliquam amet vero quam. Cum odit iusto, hic nulla veniam
+        perferendis ex! Quod fugiat sequi a ex odio.</p>
+    <p class="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat alias ipsum!
+        Veritatis,
+        fugiat autem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quisquam pariatur ab incidunt. Perferendis
+        non laudantium reprehenderit, voluptatem deserunt id. Quae dolorem sapiente numquam impedit iusto temporibus,
+        blanditiis non ipsa eveniet architecto et consectetur sit provident veritatis iste esse voluptates fugit
+        mollitia consequatur velit necessitatibus saepe dolor? Eaque, itaque? Soluta, perspiciatis, nemo esse
+        repellendus iure, qui molestias tempora ipsa beatae nam et sapiente. Et animi expedita possimus cupiditate eos
+        porro omnis id aliquid? Unde voluptate nihil placeat exercitationem deserunt iste et a ullam laudantium
+        provident ea consequatur sapiente natus, error asperiores nesciunt officiis voluptatibus rerum eaque totam iusto
+        debitis harum fugiat. Non qui rem, odit delectus architecto voluptatum facilis laborum mollitia deserunt vitae
+        dolores numquam minus quidem reprehenderit est. Expedita placeat, aspernatur perferendis porro ad optio veniam
+        adipisci tempora numquam ratione. Reprehenderit aliquam amet vero quam. Cum odit iusto, hic nulla veniam
+        perferendis ex! Quod fugiat sequi a ex odio.</p>
+
+    <p class="text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugiat alias ipsum!
+        Veritatis,
+        fugiat autem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quisquam pariatur ab incidunt. Perferendis
+        non laudantium reprehenderit, voluptatem deserunt id. Quae dolorem sapiente numquam impedit iusto temporibus,
+        blanditiis non ipsa eveniet architecto et consectetur sit provident veritatis iste esse voluptates fugit
+        mollitia consequatur velit necessitatibus saepe dolor? Eaque, itaque? Soluta, perspiciatis, nemo esse
+        repellendus iure, qui molestias tempora ipsa beatae nam et sapiente. Et animi expedita possimus cupiditate eos
+        porro omnis id aliquid? Unde voluptate nihil placeat exercitationem deserunt iste et a ullam laudantium
+        provident ea consequatur sapiente natus, error asperiores nesciunt officiis voluptatibus rerum eaque totam iusto
+        debitis harum fugiat. Non qui rem, odit delectus architecto voluptatum facilis laborum mollitia deserunt vitae
+        dolores numquam minus quidem reprehenderit est. Expedita placeat, aspernatur perferendis porro ad optio veniam
+        adipisci tempora numquam ratione. Reprehenderit aliquam amet vero quam. Cum odit iusto, hic nulla veniam
+        perferendis ex! Quod fugiat sequi a ex odio.</p>
+
+</div>
+
 
 </body>
 </html>
