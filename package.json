@@ -17,6 +17,6 @@
     "nodemon": "^2.0.6",
     "postcss": "^8.1.10",
     "tailwindcss": "^2.0.1"
-  }
-  
+  },
+  "dependencies": {}
 }
