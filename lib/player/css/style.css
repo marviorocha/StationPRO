@@ -1,0 +1,316 @@
+.navbar-down {
+  position: relative;
+  height: 56px;
+  z-index: 997;
+  bottom: 0;
+}
+
+.navbar-down nav {
+  position: fixed;
+  bottom: 0;
+}
+
+
+
+#btn-show {
+margin-top:-5px;
+
+left: 90%;
+
+}
+
+/* .sp-bg {
+opacity:0.8;
+width: 100%;
+display: block;
+background-color:  blue;
+height: 65px;
+position: fixed;
+z-index: -0;
+}
+ */
+
+
+/*  Weves Animation For Pre-load Radio */
+/* Playing Animation */
+.playing {
+position:absolute;
+ display: block;
+    right: 20px;
+  top: 30%;
+  margin: -20px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+}
+@media only screen and (max-width: 600px) {
+.playing {
+  top: 20%;
+  right: 30%;
+}
+
+}
+
+
+.playing > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-animation: wavy 1s ease infinite forwards;
+  animation: wavy 1s ease infinite forwards;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);
+}
+.playing .rect2 {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+.playing .rect3 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.playing .rect4 {
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+.playing .rect5 {
+  -webkit-animation-delay: 1.0s;
+  animation-delay: 1.0s;
+}
+@-webkit-keyframes wavy {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.6);
+    transform: scaleY(0.6);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes wavy {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(0.6);
+    transform: scaleY(0.6);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+
+/* LIVE CSS */
+
+.djlive {
+line-height:35px;
+font-weight: bold;
+position: absolute;
+display: block;
+left: 9%;
+right:80%;
+width: 180px;
+float: left;
+
+}
+
+@media only screen and (max-width: 600px) {
+.djlive {
+font-size: 0.740em;
+}
+}
+
+.vol {
+margin-left: 15px;
+}
+
+.live {
+  display: none;
+  width: 70px;
+  height: 20px;
+  left: 9%;
+  float: left;
+  margin-top: 31px;
+ position: absolute;
+  background-color: #cc1919;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #fff;
+  font-size:11px;
+  line-height:20px;
+
+  text-align: center;
+  text-shadow: none;
+}
+
+
+
+
+.range-slider {
+right: 30%;
+
+}
+
+
+#volume{
+position:absolute;
+width: 8%;
+top:15px;
+margin: 15px;
+}
+
+
+#volume {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+#volume::-webkit-slider-runnable-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+#volume[disabled]::-webkit-slider-runnable-track {
+  border: 1px solid #d7dbdd;
+  background-color: transparent;
+  opacity: 0.4;
+}
+
+#volume::-moz-range-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+}
+
+#volume::-ms-track {
+  color: transparent;
+  border: none;
+  background: none;
+  height: 6px;
+}
+
+#volume::-ms-fill-lower {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+#volume::-ms-fill-upper {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+#volume::-ms-tooltip {
+  display: none;
+  /* display and visibility only */
+}
+
+#volume::-moz-range-thumb {
+  border-radius: 20px;
+  height: 18px;
+  width: 18px;
+  border: none;
+  background: none;
+  background-color: #606670;
+}
+
+#volume:active::-moz-range-thumb {
+  outline: none;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  margin-top: -7px;
+}
+
+#volume[disabled]::-webkit-slider-thumb {
+  background-color: transparent;
+  border: 1px solid #d7dbdd;
+}
+
+#volume:active::-webkit-slider-thumb {
+  outline: none;
+}
+
+#volume::-ms-thumb {
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  border: none;
+  
+}
+
+#volume:active::-ms-thumb {
+  border: none;
+}
+
+
+
+
+.thumb {
+display: none;
+
+  color: #fff;
+  line-height: 0px;
+  text-align: center;
+
+  margin-left: 8px;
+}
+.thumb:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #2c3e50;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+
+
+/* fix icon material-icons */
+.fa-2x {
+    margin-right: 15px;
+  display: inherit !important;
+ }
+
+
+/* Sound Weves Audio */

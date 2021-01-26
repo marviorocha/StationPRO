@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+$fontFamily: "Playball", cursive;
+$quicksand: "Roboto", sans-serif;
+
+$playerColor: $padrao;
+$white: #ffffff;
+$shadow: 0px 4px 20px rgba(darken($playerColor,10%), 0.8);
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+a {
+  color: $white;
+}
+
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5.50rem;
+  bottom:0;
+  margin: auto;
+  display: flex;
+  opacity: .9;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $playerColor;
+  box-shadow: $shadow ;
+}
+
+.audioPlayer{
+  
+}
+
+.playerContainer {
+  display: flex;
+  padding: 1rem;
+  width: 60rem;
+ 
+  align-items: stretch;
+  justify-content: space-around;
+  position: relative;
+  margin: 1rem 1.2rem 0;
+
+  @include for-tablet-landscape-up{
+    font-size: 1rem; 
+    width: 30rem;
+  }
+  
+  @include for-phone-only {    
+    font-size: 1rem; 
+    width: 18rem;
+  }
+
+  
+  /*albumArt*/
+  .albumArt {
+    position: relative;
+    transform: translateY(-50%);
+    height: 4rem;
+    width: 4rem;
+    background-color: $white;
+    color: $playerColor;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all ease 0.5s;
+    &.animate {
+      animation: move 4s ease-in-out infinite;
+    }
+  }
+  .info {
+    
+    flex-basis: 60%;
+    padding-bottom: 20px;
+  @include for-phone-only {    
+    flex-basis: 50%;
+      
+  }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    font-size: 1.3rem;
+    &:hover {
+      .audioName {
+        text-shadow: 0px 0px 2px $white;
+        cursor: default;
+      }
+    }
+    .audioName {
+      flex-basis: 50%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: $white;
+    }
+    .timing {
+      display: flex;
+      margin-top: 0.5rem;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-family: $quicksand;
+      color: $white;
+    }
+  }
+  /*seekbar*/
+  .seekBar {
+    
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 0.5rem;
+   
+    .outer {
+      
+      border-radius: 5px;
+      border: 2px inset $playerColor;
+      overflow: hidden;
+      height: 0.5rem;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: darken($playerColor, 30%);
+      .inner {
+        background-color: $white;
+        display: inline-block;
+        height: 100%;
+      }
+      &:hover{
+        cursor:pointer;
+      }
+    }
+  }
+
+  /*volumeControl*/
+  .volumeControl {
+    padding-bottom: 20px;
+    display: flex;
+    flex-basis: 20%;
+    justify-content: center;
+    align-items: center;
+    .wrapper {
+      display: flex;
+      flex-basis: 100%;
+      align-items: center;
+      color: darken($playerColor, 30%);
+      &:hover {
+        i.fa {
+          color: darken($playerColor, 50%);
+        }
+      }
+    }
+    .outer {
+      border-radius: 5px;
+      border: 2px inset $playerColor;
+      background-color: darken($playerColor, 30%);
+      overflow: hidden;
+      height: 0.5rem;
+      flex-basis: 80%;
+    
+      margin-left: 0.4rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .inner {
+        background-color: $white;
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+      }
+      &:hover{
+        cursor:pointer;
+      }
+    }
+  }
+
+  /*play pause btn*/
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    top: -0.8rem;
+    right: 0.5rem;
+    border-radius: 500px;
+    font-size: 1rem;
+    outline: 0;
+    background-color: $white;
+    color: $playerColor;
+    transition: all ease 0.5s;
+    &.play {
+      .fa-pause {
+        display: none;
+      }
+    }
+    &.pause {
+      transform: rotate(180deg);
+      .fa-play {
+        display: none;
+      }
+    }
+    &:hover{
+      cursor:pointer;
+    }
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+}
+
+.msg {
+  position: absolute;
+  top: 1rem;
+  font-weight: 600;
+  color: $playerColor;
+  text-align:center;
+  font-family:$quicksand;
+}
+ 
+ 
