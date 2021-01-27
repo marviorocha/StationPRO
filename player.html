@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Player</title>
   </head>
   <style>
       input { height: 75px; width: 49px; background: #D5CCBB; color: black; }
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+     
+     input[type="range"]::-webkit-slider-thumb {
+         width: 15px;
+         -webkit-appearance: none;
+          appearance: none;
+         height: 15px;
+         cursor: ew-resize;
+         background: #FFF;
+         box-shadow: -405px 0 0 400px #605E5C;
+         border-radius: 50%;
+         
+     }
+ }
   </style>
   <body>
    
@@ -53,43 +68,19 @@
           <span
             class="text-xs font-semibold text-white shadow-md bg-red-600 p-1 rounded-md uppercase"
             >Live</span
-          >
-          <button>
-            <svg
-              class="fill-current w-9 h-9 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              focusable="false"
-              width="1em"
-              height="1em"
-              style="
-                -ms-transform: rotate(360deg);
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-              "
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M16 21c3.527-1.547 5.999-4.909 5.999-9S19.527 4.547 16 3v2c2.387 1.386 3.999 4.047 3.999 7S18.387 17.614 16 19v2z"
-              />
-              <path
-                d="M16 7v10c1.225-1.1 2-3.229 2-5s-.775-3.9-2-5zM4 17h2.697L14 21.868V2.132L6.697 7H4c-1.103 0-2 .897-2 2v6c0 1.103.897 2 2 2z"
-              />
-              <rect x="0" y="0" />
-            </svg>
+          > 
+          
+          
+          <button class="material-icons absolute  text-white">
+            volume_down 
           </button>
-          <input type="range" min="-100" max="100" value="0" step="10" name="power" list="powers">
-          <datalist id="powers">
-          <option value="0">
-          <option value="-30">
-          <option value="30">
-           <option value="++50">
-          </datalist>
-          <span class="leading-8 hidden  text-white">Time: 01:01</span>
 
-          <button class="">Heart</button>
+          <input type="range" class="rounded-full relative opacity-90 overflow-hidden 
+          appearance-none transform rotate-90 bottom-16 right-9 cursor-pointer bg-gray-400 h-3 w-24" min="1" max="100" step="1">
+          
+          <span class="leading-8 hidden md:show   text-white">Time: 01:01</span>
+
+          <button class="material-icons text-red-600">favorite_border</button>
         </div>
       </div>
     </nav>
